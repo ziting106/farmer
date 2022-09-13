@@ -1,0 +1,86 @@
+.header {
+  background-image: url(../assets/img/pic_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: calc(100vh);
+  transition: 0.2s;
+}
+
+//nav內容
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  .icon {
+    width: 25%;
+    padding: 10px;
+    object-fit: contain;
+  }
+}
+
+//中間的水果圖片
+.fruitImg {
+  display: flex;
+  justify-content: center;
+  height: calc(70vh);
+  div {
+    border: 5px solid #fff;
+    filter: drop-shadow(0 0 3px rgb(108, 108, 108));
+    width: 75%;
+    top: 10%;
+    position: relative;
+    display: flex;
+    //"農糧統計開放資料"
+    .p1 {
+      width: 25%;
+      padding-left: 10%;
+      font-size: 80px;
+      color: rgb(0, 100, 0);
+    }
+    //"提供農糧產品生產成本...
+    .p2 {
+      width: 30%;
+      padding-top: 4%;
+      margin-left: 20%;
+      font-size: 30px;
+    }
+  }
+
+  img {
+    width: 90%;
+    bottom: -10%;
+    left: 12.5%;
+    position: absolute;
+  }
+}
+
+.padding {
+  padding: 0 50px 0 50px;
+}
+
+@media (max-width: 1240px) {
+  .header {
+    background-size: contain;
+  }
+  .fruitImg {
+    height: calc(40vh);
+    img {
+      bottom: 40%;
+      left: 13.3%;
+    }
+    div {
+      .p1 {
+        width: 30%;
+        padding-left: 7%;
+        font-size: 45px;
+        color: rgb(0, 100, 0);
+      }
+      .p2 {
+        font-size: 18px;
+        margin-left: 28%;
+      }
+    }
+  }
+}
