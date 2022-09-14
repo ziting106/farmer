@@ -1,0 +1,249 @@
+<header class="header2">
+  <p class="heading2">農家戶口抽樣調查-農家戶口-表一</p>
+  <img src="" alt="" />
+</header>
+<main class="center">
+  <!-- 操作步驟說明 -->
+  <section>
+    <div class="title">
+      <p>操作步驟說明</p>
+      {{ test }}
+      <!-- 步驟說明的下底線 -->
+      <div></div>
+      <!--操作步驟說明模組 start-->
+      <mat-stepper [linear]="isLinear" #stepper>
+        <mat-step [stepControl]="firstFormGroup">
+          <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Fill out your name</ng-template>
+          </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Done</ng-template>
+        </mat-step>
+      </mat-stepper>
+      <!--操作步驟模組 end-->
+    </div>
+    <!-- 示範圖 -->
+    <div class="checkButton">
+      <p class="type1">復分類(列)</p>
+      <div>
+        <p class="type2">統計項</p>
+        <p class="type3">復分類(列)</p>
+      </div>
+    </div>
+  </section>
+  <!-- 查詢條件設定 -->
+  <section>
+    <div class="title">
+      <p>查詢條件設定</p>
+      <!-- 查詢條件設定下底線 -->
+      <div></div>
+    </div>
+    <!-- 日期選擇模組 start -->
+    <!-- 套件壞掉why? => 添增了不必要的錯誤資訊 -->
+    <div class="checkButton">
+      <mat-form-field appearance="fill">
+        <mat-label>日期時間起始</mat-label>
+        <mat-date-range-input [rangePicker]="picker">
+          <input matStartDate placeholder="Start date" />
+          <input matEndDate placeholder="End date" />
+        </mat-date-range-input>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      </mat-form-field>
+    </div>
+    <!--  日期選擇模組 end -->
+    <div>
+      <!-- 統計項下拉選單模組 start -->
+      <div class="select">
+        <p class="heading3">統計項</p>
+        <mat-form-field class="selectStyle" appearance="fill">
+          <mat-label>項目</mat-label>
+          <mat-select>
+            <mat-option value="one">First option</mat-option>
+            <mat-option value="two">Second option</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <!-- 統計項下拉選單模組 end -->
+
+      <!-- 拖拉區 -->
+      <div class="flex dragDrop">
+        <div class="drop drag">
+          <div>
+            <p class="heading3">復分類(列)</p>
+            <button mat-raised-button color="primary">
+              <mat-icon>add_circle</mat-icon> 新增
+            </button>
+          </div>
+          <!-- 左拖拉模組 start -->
+          <!-- 左拖拉1 XX模組 mat-raised-button -->
+          <div
+            class="example-container itemX"
+            mat-raised-button
+            matBadge="X"
+            matBadgeColor="warn"
+            [matBadgeHidden]="hidden"
+            (click)="toggleBadgeVisibility()"
+          >
+            <!-- XX按件模組 start -->
+            <!-- 1.在matBadge放上X icon -->
+            <!-- 2.將點擊事件限縮在右上角的item上 -->
+            <!-- bug1:點擊後連動到其他的X icon -->
+            <!-- XX按件模組 start -->
+
+            <!-- 1 -->
+            <div
+              cdkDropList
+              #todoList="cdkDropList"
+              [cdkDropListData]="todo"
+              [cdkDropListConnectedTo]="[doneList]"
+              class="example-list"
+              (cdkDropListDropped)="drop($event)"
+            >
+              <!-- <div class="example-box" *ngFor="let item of todo" cdkDrag>
+                {{ item }}
+              </div> -->
+              <mat-form-field
+                class="selectStyle example-box"
+                appearance="fill"
+                *ngFor="let item of todo"
+                cdkDrag
+              >
+                <mat-label> {{ item }}</mat-label>
+                <mat-select>
+                  <mat-option value="one">First option</mat-option>
+                  <mat-option value="two">Second option</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+          <!-- 2 -->
+          <!-- 左拖拉2 XX模組 mat-raised-button -->
+
+          <div
+            class="example-container"
+            matBadge="X"
+            matBadgeColor="warn"
+            [matBadgeHidden]="hidden"
+            (click)="toggleBadgeVisibility()"
+          >
+            <div
+              cdkDropList
+              #todoList="cdkDropList"
+              [cdkDropListData]="todo"
+              [cdkDropListConnectedTo]="[doneList]"
+              class="example-list"
+              (cdkDropListDropped)="drop($event)"
+            >
+              <mat-form-field
+                class="selectStyle example-box"
+                appearance="fill"
+                *ngFor="let item of todo2"
+                cdkDrag
+              >
+                <mat-label> {{ item }}</mat-label>
+                <mat-select>
+                  <mat-option value="one">First option</mat-option>
+                  <mat-option value="two">Second option</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+          <!-- 左拖拉模組 end -->
+        </div>
+
+        <div class="drog drop">
+          <div>
+            <p class="heading3" style="margin: 0">復分類(行)</p>
+            <button mat-raised-button color="primary">
+              <mat-icon>add_circle</mat-icon> 新增
+            </button>
+          </div>
+          <!-- 右拖拉XX模組 mat-raised-button -->
+          <div
+            class="example-container"
+            matBadge="X"
+            matBadgeColor="warn"
+            [matBadgeHidden]="hidden"
+            (click)="toggleBadgeVisibility()"
+          >
+            <!-- 右拖拉模組 start -->
+            <div
+              cdkDropList
+              #doneList="cdkDropList"
+              [cdkDropListData]="done"
+              [cdkDropListConnectedTo]="[todoList]"
+              class="example-list"
+              (cdkDropListDropped)="drop($event)"
+            >
+              <!-- <div class="example-box" *ngFor="let item of done" cdkDrag>
+                {{ item }}
+              </div> -->
+              <mat-form-field
+                class="selectStyle example-box"
+                appearance="fill"
+                *ngFor="let item of done"
+                cdkDrag
+              >
+                <mat-label> {{ item }}</mat-label>
+                <mat-select>
+                  <mat-option value="one">First option</mat-option>
+                  <mat-option value="two">Second option</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <!-- 右拖拉模組 end -->
+          </div>
+        </div>
+      </div>
+      <div class="checkButton">
+        <button mat-raised-button color="primary">查詢</button>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="title">
+      <p>查詢結果</p>
+      <div></div>
+    </div>
+    <div class="resule">
+      <div>
+        <mat-form-field class="selectStyle" appearance="fill">
+          <mat-label>項目</mat-label>
+          <mat-select>
+            <mat-option value="one">First option</mat-option>
+            <mat-option value="two">Second option</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="selectStyle" appearance="fill">
+          <mat-label>項目</mat-label>
+          <mat-select>
+            <mat-option value="one">First option</mat-option>
+            <mat-option value="two">Second option</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="dropText">
+        <p class="text2" style="margin: 0">製表時間:</p>
+        <button mat-raised-button color="primary">
+          <mat-icon>add_circle</mat-icon> 新增
+        </button>
+      </div>
+    </div>
+    <!-- 查詢結果 start -->
+    <div class="select">
+      <p class="heading3">統計項</p>
+      <mat-form-field class="selectStyle" appearance="fill">
+        <mat-label>項目</mat-label>
+        <mat-select>
+          <mat-option value="one">First option</mat-option>
+          <mat-option value="two">Second option</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <!-- 查詢結果 end -->
+  </section>
+</main>

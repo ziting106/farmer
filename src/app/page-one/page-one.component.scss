@@ -1,0 +1,109 @@
+// header主視覺
+.topHeader {
+  background: url(../../assets/img/pic_bg.png) no-repeat top/cover;
+  padding: 10%;
+}
+//白框內容及水果圖
+.title {
+  padding: 5%;
+  background-clip: border-box;
+  height: 600px;
+  display: flex;
+  justify-content: space-between;
+  border: 5px solid #fff;
+  filter: drop-shadow(0 0 3px rgb(108, 108, 108));
+  .p2 {
+    width: 30%;
+  }
+  // 🍉🍉🍉header水果背景圖
+  .fruitimg {
+    // height: 115%;
+    width: 110%;
+    position: absolute;
+    left: 0px;
+    right: 0;
+    top: 0;
+    bottom: -150px;
+    background: url(../../assets/img/pic_fruit.png) no-repeat bottom/contain;
+    z-index: 1;
+  }
+}
+
+//section內部Padding
+.padding {
+  padding: 5%;
+}
+// section右側段落邊距
+.paragraphMargin {
+  margin-bottom: 5%;
+}
+//綠色小API按鈕
+.APIbutton {
+  display: flex;
+}
+
+// section資訊頁
+.page {
+  // height: var(--pageHeight);
+  //sectionPadding
+  padding: 5% 10%;
+  position: relative;
+  background-color: var(--cover);
+  background-size: contain;
+  .heading2 {
+    display: block;
+  }
+  .heading3 {
+    margin-right: 10px;
+  }
+  // API button
+  a {
+    border: 1.5px solid var(--green2);
+    margin-right: 10px;
+    padding: 0 15px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    color: var(--green1);
+    //icon保留與文字的空間
+    mat-icon {
+      margin-right: 5px;
+    }
+  }
+  .text1 {
+    width: 70%;
+  }
+}
+
+//水果背景遮色片
+.page::before {
+  content: "";
+  height: 120%;
+  position: absolute;
+  left: 9.5%;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: url(../../assets/img/pic_fruit.png) no-repeat center/contain;
+  opacity: 0.2;
+  z-index: -1;
+}
+.text {
+  color: var(--gray1);
+  .textLeft {
+    width: 100%;
+    margin-right: 10%;
+  }
+}
+.border1 {
+  border: 5px solid var(--green2);
+}
+.border2 {
+  border: 5px solid var(--blue);
+}
+.colorChange {
+  background-color: rgba(198, 198, 198, 0.5);
+}
+.border3 {
+  border: 5px solid var(--red);
+}

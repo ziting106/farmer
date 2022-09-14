@@ -1,0 +1,20 @@
+:root {
+  --cover: rgba(255, 255, 255, 0.5);
+  --green1: rgb(0, 100, 0);
+  --green2: #c8e6c9;
+  --green3: #81c784;
+  --gray1: rgb(69, 69, 69);
+  --gray2: rgb(161, 161, 161);
+  --textWhite: rgb(255, 255, 255);
+  --blue: #b3e5fc;
+  --red: #f8bbd0;
+  --white: #fff;
+  --orange: rgb(255, 166, 0);
+  --pageHeight: 67.5rem;
+  --h1: 5rem;
+  --h2: 4rem;
+  --h3: 3rem;
+  --h4: 2rem;
+  --h5: 1.5rem;
+  --h6: 1rem;
+}/*# sourceMappingURL=variable.css.map */

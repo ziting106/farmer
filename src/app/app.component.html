@@ -1,27 +1,43 @@
-<body>
-  <header class="header">
-    <nav>
-      <div class="nav padding">
-        <img class="icon" src="../assets/img/pic_logo.png" alt="" />
-        <div>
-          <button>
-            <mat-icon>home</mat-icon>
-            回本署
-          </button>
-          <button>EN</button>
-          <button>MENU</button>
-        </div>
-      </div>
-    </nav>
-    <div class="fruitImg">
-      <div class="title">
-        <p class="p1">農糧統計開放資料</p>
-        <p class="p2">
-          提供農糧產品生產成本及產地價格資料，做學術研究或一般參考使用。
-        </p>
-      </div>
-      <img src="../assets/img/pic_fruit.png" alt="" />
+<!-- navBar -->
+<nav>
+  <a routerLink="">
+    <img class="icon" src="../assets/img/pic_logo.png" alt="" />
+  </a>
+  <div class="navIten">
+    <a routerLink="/pageOne">
+      <mat-icon>home</mat-icon>
+      <p>回本署</p>
+    </a>
+    <a href="">
+      <mat-icon>language</mat-icon>
+      <p>EN</p>
+    </a>
+    <a routerLink="/heroes">
+      <mat-icon>H</mat-icon>
+      <p>Heroes</p>
+    </a>
+    <a href="">
+      <mat-icon>menu</mat-icon>
+      <p>MENU</p>
+    </a>
+  </div>
+</nav>
+
+<!-- 顯示路由配對的內容 -->
+<router-outlet></router-outlet>
+
+<footer class="farmerFooter footerText">
+  <img src="../assets/img/pic_logo.png" alt="" />
+  <div class="place">
+    <p>台北辦公室區: 10024台北市杭州南路1段15號 (02)2393-7231</p>
+    <p>中興辦公室區: 540207南投縣南投市光華路8號 (049)233-23802393-7231</p>
+  </div>
+  <div class="notice">
+    <div class="calcPeople">
+      <p>瀏覽人數:</p>
+      <p>在線人數:</p>
     </div>
-  </header>
-  <section class="section1"></section>
-</body>
+    <p>建議瀏覽器: Chrome、Firefox、Edge、Safari</p>
+    <p>行政院農業委員會農糧署版權所有，未經允許，不得以任何形式複製和採用</p>
+  </div>
+</footer>

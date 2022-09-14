@@ -1,1 +1,136 @@
-/* You can add global styles to this file, and also import other style files *//*# sourceMappingURL=styles.css.map */
+/* You can add global styles to this file, and also import other style files */
+html {
+  font-size: 16px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+:root {
+  --cover: rgba(255, 255, 255, 0.5);
+  --green1: rgb(0, 100, 0);
+  --green2: rgb(113, 166, 113);
+  --green3: rgb(23, 156, 23);
+  --gray1: rgb(69, 69, 69);
+  --gray2: rgb(161, 161, 161);
+  --textWhite: rgb(255, 255, 255);
+  --blue: rgb(132, 226, 255);
+  --red: rgb(255, 121, 121);
+  --white: #fff;
+  --orange: rgb(255, 166, 0);
+  --pageHeight: 67.5rem;
+  --h1: 5rem;
+  --h2: 4rem;
+  --h3: 3rem;
+  --h4: 2rem;
+  --h5: 1.5rem;
+  --h6: 1rem;
+}
+
+a {
+  white-space: nowrap;
+  color: var(--gray1);
+  text-decoration: none;
+}
+
+.heading1 {
+  font-size: var(--h1);
+  color: var(--green1);
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.heading2 {
+  font-size: var(--h3);
+  color: var(--gray1);
+  font-weight: bold;
+  padding-bottom: 10%;
+  white-space: nowrap;
+}
+
+.heading3 {
+  font-size: var(--h4);
+  color: var(--gray1);
+  font-weight: bold;
+  margin: 1% 0;
+  white-space: nowrap;
+}
+
+.text {
+  font-size: var(--h4);
+  color: var(--gray1);
+}
+
+.text1 {
+  font-size: var(--h4);
+  color: var(--gray1);
+}
+
+.text2 {
+  font-size: var(--h5);
+  color: var(--gray1);
+}
+
+.footerText {
+  font-size: var(--h6);
+  color: var(--textWhite);
+  line-height: 2rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+button:hover {
+  color: pink;
+}
+
+@media (max-width: 1440px) {
+  :root {
+    --pageHeight: 56rem;
+  }
+}
+@media (max-width: 1280px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1080px) {
+  html {
+    font-size: 13px;
+  }
+}
+@media (max-width: 980px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media (max-width: 900px) {
+  html {
+    font-size: 11px;
+  }
+}
+@media (max-width: 800px) {
+  html {
+    font-size: 10px;
+  }
+  :root {
+    --pageHeight: 50rem;
+  }
+} /*# sourceMappingURL=styles.css.map */

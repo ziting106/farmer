@@ -1,0 +1,29 @@
+[
+    {
+        "type": "Directory",
+        "name": "c:\\Users\\zting\\Desktop\\zting專案區\\farmer\\node_modules\\@angular\\material\\prebuilt-themes",
+        "parent_id": null,
+        "fsPath": "c:\\Users\\zting\\Desktop\\zting專案區\\farmer\\node_modules\\@angular\\material\\prebuilt-themes",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "zoKC0huN6lPitpOR"
+    },
+    {
+        "type": "File",
+        "name": "c:\\Users\\zting\\Desktop\\zting專案區\\farmer\\angular.json",
+        "parent_id": null,
+        "fsPath": "c:\\Users\\zting\\Desktop\\zting專案區\\farmer\\angular.json",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "xk6ntNjpoIwUsPLq"
+    },
+    {
+        "type": "File",
+        "name": "c:\\Users\\zting\\Desktop\\zting專案區\\farmer\\src\\app\\app.module.ts",
+        "parent_id": null,
+        "fsPath": "c:\\Users\\zting\\Desktop\\zting專案區\\farmer\\src\\app\\app.module.ts",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "mFX1SGh64AfoqBsE"
+    }
+]

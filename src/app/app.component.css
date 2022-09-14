@@ -1,4 +1,48 @@
-.title {
-  color: green;
-  font-weight: bold;
+nav {
+  width: 100%;
+  padding: 0 10%;
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--cover);
+}
+nav .icon {
+  width: 25%;
+  padding: 10px 0;
+}
+nav .navIten {
+  display: flex;
+  z-index: 5;
+}
+nav .navIten a {
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 5%;
+}
+nav .navIten a:hover {
+  color: var(--gray2);
+}
+
+.farmerFooter {
+  display: flex;
+  padding: 2% 0 3% 0;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--gray1);
+  border-top: 5px solid var(--orange);
+}
+.farmerFooter img {
+  width: 30%;
+  margin: 0 auto;
+}
+.farmerFooter .place {
+  margin-bottom: 5%;
+}
+.farmerFooter .calcPeople {
+  display: flex;
+  justify-content: center;
 }/*# sourceMappingURL=app.component.css.map */

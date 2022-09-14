@@ -3,9 +3,13 @@ root = true
 
 [*]
 charset = utf-8
+# tab縮排以空白為字元
 indent_style = space
+# 按下tab都是兩個空白
 indent_size = 2
+# 每個檔案最後一定斷行
 insert_final_newline = true
+# 存檔自動移除行尾空白
 trim_trailing_whitespace = true
 
 [*.ts]

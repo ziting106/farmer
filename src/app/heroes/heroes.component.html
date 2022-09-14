@@ -1,0 +1,30 @@
+<app-dashboard></app-dashboard>
+<h2>My Heroes</h2>
+<div class="flex">
+  <ul class="heroes">
+    <li *ngFor="let hero of heroes">
+      <button
+        type="button"
+        (click)="onSelect(hero)"
+        [class.selected]="hero === selectedHero"
+        routerLink="/detail/{{ hero.id }}"
+      >
+        <span class="badge">{{ hero.id }}</span>
+        <span class="name">{{ hero.name }}</span>
+      </button>
+    </li>
+  </ul>
+  <!-- 原本寫在一起的英雄詳細資料，現在分開寫到hero-detail裡 -->
+  <!-- <div *ngIf="selectedHero">
+    <h2>{{ selectedHero.name | uppercase }} Details</h2>
+    <div>id: {{ selectedHero.id }}</div>
+    <div>
+      <label for="hero-name">Hero name: </label>
+      <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name" />
+    </div>
+  </div> -->
+
+  <!-- 顯示hero-detail -->
+  <!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
+  <app-messages></app-messages>
+</div>

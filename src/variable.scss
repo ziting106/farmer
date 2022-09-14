@@ -1,0 +1,32 @@
+:root {
+  //navBar & 背景遮色片
+  --cover: rgba(255, 255, 255, 0.5);
+  //首頁title
+  --green1: rgb(0, 100, 0);
+  //API標籤、綠色外框
+  --green2: #c8e6c9;
+  //footer LogoTitle
+  --green3: #81c784;
+  //內文文字、中標文字
+  --gray1: rgb(69, 69, 69);
+  --gray2: rgb(161, 161, 161);
+  //footer白色字體
+  --textWhite: rgb(255, 255, 255);
+  //section border
+  --blue: #b3e5fc;
+  --red: #f8bbd0;
+  --white: #fff;
+
+  //footer border
+  --orange: rgb(255, 166, 0);
+  // 單頁高度
+  --pageHeight: 67.5rem;
+
+  //字體
+  --h1: 5rem;
+  --h2: 4rem;
+  --h3: 3rem;
+  --h4: 2rem;
+  --h5: 1.5rem;
+  --h6: 1rem;
+}
